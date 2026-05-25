@@ -8,6 +8,8 @@ interface PinGateProps {
 }
 
 const ACTORS = ["제니", "직원1", "직원2", "관리자"];
+const PIN_LENGTH = 6;
+
 export default function PinGate({ onSuccess }: PinGateProps) {
   const [selectedActor, setSelectedActor] = useState(ACTORS[0]);
   const [pin, setPin] = useState("");
@@ -36,12 +38,12 @@ export default function PinGate({ onSuccess }: PinGateProps) {
 
   const handleKeyPress = (num: string) => {
     if (checking) return;
-    if (pin.length < 4) {
+    if (pin.length < PIN_LENGTH) {
       const newPin = pin + num;
       setPin(newPin);
       setError(false);
 
-      if (newPin.length === 4) {
+      if (newPin.length === PIN_LENGTH) {
         verifyPin(newPin);
       }
     }
@@ -100,7 +102,7 @@ export default function PinGate({ onSuccess }: PinGateProps) {
         {/* PIN Indicators */}
         <div className="flex flex-col items-center mb-8">
           <div className="flex gap-4 justify-center py-4">
-            {[0, 1, 2, 3].map((index) => (
+            {Array.from({ length: PIN_LENGTH }).map((_, index) => (
               <div
                 key={index}
                 className={`w-4 h-4 rounded-full border transition-all duration-150 ${
