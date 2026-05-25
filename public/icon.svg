@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background glow gradient -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#08070d" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Rich chocolate gradients -->
+    <linearGradient id="gold-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="40%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    
+    <linearGradient id="gold-highlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="dark-chocolate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Background matching app style -->
+  <rect width="512" height="512" rx="128" fill="#08070d" stroke="#f59e0b" stroke-width="6" stroke-opacity="0.2"/>
+  
+  <!-- Glow effect -->
+  <circle cx="256" cy="256" r="230" fill="url(#glow)"/>
+
+  <!-- Golden outer framing for premium PWA feel -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="none" stroke="url(#gold-base)" stroke-width="4" stroke-opacity="0.4"/>
+
+  <!-- Chocolate block group -->
+  <g transform="translate(116, 116)">
+    <!-- Base Board -->
+    <rect x="0" y="0" width="280" height="280" rx="36" fill="url(#dark-chocolate)" filter="drop-shadow(0px 20px 30px rgba(0,0,0,0.7))"/>
+    <rect x="8" y="8" width="264" height="264" rx="28" fill="none" stroke="url(#gold-base)" stroke-width="4" stroke-opacity="0.3"/>
+
+    <!-- Quadrant 1 (Top Left) -->
+    <rect x="24" y="24" width="104" height="104" rx="16" fill="url(#gold-base)" filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.3))"/>
+    <rect x="28" y="28" width="96" height="96" rx="12" fill="none" stroke="url(#gold-highlight)" stroke-width="3"/>
+    <rect x="44" y="44" width="64" height="64" rx="8" fill="#78350f" fill-opacity="0.15"/>
+
+    <!-- Quadrant 2 (Top Right) -->
+    <rect x="152" y="24" width="104" height="104" rx="16" fill="url(#gold-base)" filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.3))"/>
+    <rect x="156" y="28" width="96" height="96" rx="12" fill="none" stroke="url(#gold-highlight)" stroke-width="3"/>
+    <rect x="172" y="44" width="64" height="64" rx="8" fill="#78350f" fill-opacity="0.15"/>
+
+    <!-- Quadrant 3 (Bottom Left) -->
+    <rect x="24" y="152" width="104" height="104" rx="16" fill="url(#gold-base)" filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.3))"/>
+    <rect x="28" y="156" width="96" height="96" rx="12" fill="none" stroke="url(#gold-highlight)" stroke-width="3"/>
+    <rect x="44" y="172" width="64" height="64" rx="8" fill="#78350f" fill-opacity="0.15"/>
+
+    <!-- Quadrant 4 (Bottom Right) -->
+    <rect x="152" y="152" width="104" height="104" rx="16" fill="url(#gold-base)" filter="drop-shadow(0px 8px 12px rgba(0,0,0,0.3))"/>
+    <rect x="156" y="156" width="96" height="96" rx="12" fill="none" stroke="url(#gold-highlight)" stroke-width="3"/>
+    <rect x="172" y="172" width="64" height="64" rx="8" fill="#78350f" fill-opacity="0.15"/>
+  </g>
+
+  <!-- Crown Emoji Accent in Gold -->
+  <path d="M216 170 L236 210 L276 210 L296 170 L271 236 L241 236 Z" fill="#fffbeb" opacity="0.3"/>
+</svg>
